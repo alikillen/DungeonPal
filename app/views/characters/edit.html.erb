@@ -1,0 +1,14 @@
+<h1> Edit Character</h1>
+
+
+<form action="<%=characters_path params[:id]%>" method="PATCH">
+  <input type= "hidden" value="<%=form_authenticity_token%>" name="authenticity_token">
+<input type="hidden" name ="_method" value="PATCH">
+ <%# this makes it so form will accept patch req not post %>
+  <label>Name</label>
+  <input type="text" name="character[:title]" value="<%=@character|"name"|%>" >
+  <label>Class</label>
+  <input type="text" name="character[:Class]" value="<%=@character|"class"|%>">
+  <input type ="submit" value="Update">
+
+</form>

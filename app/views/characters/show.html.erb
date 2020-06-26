@@ -1,0 +1,14 @@
+<h1> Here's your character: </h1>
+
+<%= @character[:image]%>
+<%= @character[:name]%>
+<%= @character[:race]%>
+<%= @character[:class]%>
+<%= @character[:alignment]%>
+<%= @character[:level]%>
+<%= @character[:HP]%>
+<%= @character[:XP]%>
+<%= @character[:armor_class]%>
+
+
+<%= link_to 'Character Record', character_path(@character) %>

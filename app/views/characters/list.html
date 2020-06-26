@@ -1,0 +1,34 @@
+<h1> List of all Characters </h1>
+
+<%# list all characters and attributes from form - list name and link?%>
+<ul>
+<% @characters.each do |character|%>
+    <li>
+    <%= character["image"]%>
+    </li>
+    <li>
+    <%= character["name"]%>
+    </li>
+    <li>
+    <%= character["race"]%>
+    </li>
+    <li>
+    <%= character["class"]%>
+    </li>
+    <li>
+    <%= character["alginment"]%>
+    </li>
+    <li>
+    <%= character["level"]%>
+    </li>
+    <li>
+    <%= character["HP"]%>
+    </li>
+    <li>
+    <%= character["XP"]%>
+    </li>
+    <li>
+    <%= character[:armor_class]%>
+    </li>
+  <%end%>
+</ul>

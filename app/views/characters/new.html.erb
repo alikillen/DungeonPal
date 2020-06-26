@@ -1,0 +1,29 @@
+<h1> Add a new character </h1>
+
+
+<form action="<%=characters_path%>" method="POST">
+<input type= "hidden" value="<%=form_authenticity_token%>" name="authenticity_token">
+<%# token visible in inspect tools -its unique and changes with each refresh %>
+
+  <label>Image</label>
+  <input type="image" name="character[:image]">
+  <label>Name</label>
+  <input type="text" name="character[:name]">
+  <label>Race</label>
+  <input type="text" name="character[:race]">
+  <label>Class</label>
+  <input type="text" name="character[:class]">
+  <label>Alignment</label>
+  <input type="text" name="character[:aligment]">
+  <label>Level</label>
+  <input type="number" name="character[:level]">
+  <label>Hit Points</label>
+  <input type="number" name="character[:HP]">
+   <label>Experience Points</label>
+  <input type="number" name="character[:XP]">
+  <label>Armor Class</label>
+  <input type="text" name="character[:armor_class]">
+  
+  <input type ="submit" value="Create">
+
+</form>
