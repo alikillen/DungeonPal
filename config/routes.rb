@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  # root 'pages#index'
+    root 'characters#index'
   #use resources? and scaffolding? in future
 
     #list all characters
@@ -25,6 +25,10 @@ Rails.application.routes.draw do
 
     #create a character - actually save the data to the session
     post "/characters/create", to:"characters#create", as: "create_character"
+
+
+    #mini challenge - create a dynamic route so that names in URL are displayed to page
+    get "characters/:names", to: "characters#index", as:"data"
 
 
 end

@@ -12,7 +12,12 @@ class CharactersController < ApplicationController
 
   def index
     #show homepage
-    render plain: "index/home working"
+    #render plain: "index/home working"
+
+    @user = "Username"
+
+    puts params
+    @names = params[:names]
   end
 
   def edit

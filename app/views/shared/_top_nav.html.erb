@@ -1,0 +1,18 @@
+<%# <% = render "shared/top_nav" %>
+<%# <h1>home</h1> %>
+
+
+<nav>
+  <% if @user %>
+    <%= "hey #{user}" %>
+  <% else %>
+    <h1> Please login </h1>
+  <% end %>
+
+  <ul>
+  <li><%= link_to "home", root_path %></li> 
+  <%# takes 2 arguments, what your link is called/what you will see onscreen, and what your route is %>
+  <%# this is where prefixes are useful - DONT HARDCODE ROUTES HERE like "/contact" or "/home" %>
+  <li><%= link_to "Create a Character", new_character_path %></li>
+  </ul>
+</nav>
