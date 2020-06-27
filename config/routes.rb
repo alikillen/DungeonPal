@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     get "/characters/:id", to:"characters#show", as:"character"
 
     #create a character - actually save the data to the session
-    post "/characters/create", to:"characters#create", as: "create_character"
+    post "/characters", to:"characters#create", as: "create_character"
 
 
     #mini challenge - create a dynamic route so that names in URL are displayed to page

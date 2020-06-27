@@ -45,23 +45,24 @@ class CharactersController < ApplicationController
     # how to save data to session? use hash? 
     #need a way to save data that will work with the database later
    # render plain: "create working"
-    # puts "-----------------"
-    # puts params
-    # if session[:characters] == nil
-    #    session[:characters] = {}
-    # end
-    # session[:characters].push(params[:character])
-    # #redirect to the show html page
-    # redirect_to character_path(session[:characters].length)
-    # # pass dynamic route with parentheses
+    puts "-----------------"
+    puts params
+    if session[:characters] == nil
+       session[:characters] = []
+    end
+    session[:characters].push(params[:character])
+    #redirect to the show html page
+    redirect_to character_path(session[:characters].length)
+    # pass dynamic route with parentheses
   end
  
   def show
-    # @character = session[:characters][params[:id].to_i - 1]
-    # puts "-------show method"
-    # puts @character
+    @character = session[:characters][params[:id].to_i - 1]
+    #puts "-------show method"
+    puts @character
+    #puts params
     # ################ need to fix this bit!
-    render plain: "show working"
+    #render plain: "show working"
     
   end
 
