@@ -1,4 +1,5 @@
-<img src="https://images.unsplash.com/photo-1578377375762-cbcc98d68af0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+
+<img class="title_img" src="https://images.unsplash.com/photo-1578377375762-cbcc98d68af0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
 
 
 <h1> <%= @names %> </h1> 
@@ -8,5 +9,5 @@
   <p class="lead">Welcome to DungeonMate</p>
   <hr class="my-4">
   <p>An app for creating and saving your DnD Characters.</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Create your Character</a>
+  <a class="btn btn-primary btn-lg" href="<%= link_to new_character_path %>" role="button">Create your Character</a>
 </div>

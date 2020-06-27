@@ -41,6 +41,8 @@ class CharactersController < ApplicationController
  
  
   def create
+
+    # how to save data to session? use hash? 
     #need a way to save data that will work with the database later
    # render plain: "create working"
     # puts "-----------------"
