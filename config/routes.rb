@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get "/characters/list", to: "characters#list", as: "list_all"
 
     #home
-    get "/characters", to:"characters#index"
+    get "/characters", to:"characters#index", as: "home"
 
     #create a new character with form
     # prefix is inherited by post route IF the url matches
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     post "/characters/edit", to:"characters#edit", as: "edit_character"
 
     #show a single character
-    get "/characters/:id", to:"characters#show", as:"character"
+    get "/characters/:id", to:"characters#show", as:"show_characters"
 
     #create a character - actually save the data to the session
     post "/characters", to:"characters#create", as: "create_character"

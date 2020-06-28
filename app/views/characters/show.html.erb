@@ -1,15 +1,23 @@
 <h1> Here's your character: </h1>
 
-<%= @character[:image]%>
-<%= @character[:name]%>
-<%= @character[:race]%>
-<%= @character[:class]%>
-<%= @character[:alignment]%>
-<%= @character[:level]%>
-<%= @character[:HP]%>
-<%= @character[:XP]%>
-<%= @character[:armor_class]%>
+<%# need to fix create method
+need to loop through according to id? see lists method %>
+
+<div class = "show_characters">
+  <ul>
+    <li><%= @character[:image]%></li>
+    <li><%= @character[:name]%></li>
+    <li><%= @character[:race]%></li>
+    <li><%= @character[:class]%></li>
+    <li><%= @character[:alignment]%></li>
+    <li><%= @character[:level]%></li>
+    <li><%= @character[:HP]%></li>
+    <li><%= @character[:XP]%></li>
+    <li><%= @character[:armor_class]%></li>
+  <ul>
+</div>
 
 <%= puts params %>
 
 <%= link_to 'Character Record', character_path(@character) %>
+
