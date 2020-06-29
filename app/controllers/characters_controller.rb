@@ -6,6 +6,11 @@ class CharactersController < ApplicationController
   
   #@character = Character.find(params[:id])
 
+  # def initialize
+  #   @character = character
+  # end
+
+
   def search
   end
 
@@ -37,6 +42,7 @@ class CharactersController < ApplicationController
  
   def new
    # render plain: "new working"
+   #@character = Character.new
   end
  
  
@@ -47,13 +53,28 @@ class CharactersController < ApplicationController
    # render plain: "create working"
     puts "-----------------"
     puts params
-    if session[:characters] == nil
-       session[:characters] = []
+    # if session[:characters] == nil
+    #    session[:characters] = []
+    # end
+    # session[:characters].push(params[:character])
+    # #redirect to the show html page
+    # redirect_to characters_path(session[:characters].length)
+    # # pass dynamic route with parentheses
+
+
+     # This action uses POST parameters. They are most likely coming
+  # from an HTML form which the user has submitted. The URL for
+  # this RESTful request will be "/clients", and the data will be
+  # sent as part of the request body.
+
+    @character = Character.new(characters_params)
+    if @character.save
+      redirect_to @characters
+    else
+      # This line overrides the default rendering behavior, which
+      # would have been to render the "create" view.
+      render "new"
     end
-    session[:characters].push(params[:character])
-    #redirect to the show html page
-    redirect_to character_path(session[:characters].length)
-    # pass dynamic route with parentheses
   end
  
   def show
